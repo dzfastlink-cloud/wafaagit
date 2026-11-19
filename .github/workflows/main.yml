@@ -35,7 +35,7 @@ jobs:
           gradle-version: 8.9
 
       - name: Build Release APK
-        run: chmod +x gradlew && ./gradlew assembleRelease --no-daemon
+        run: gradle assembleRelease --no-daemon
 
       - name: List built APKs
         run: ls -la app/build/outputs/apk/release/
